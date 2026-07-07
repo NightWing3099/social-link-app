@@ -1,0 +1,14 @@
+{
+  "name": "social-link-app",
+  "version": "1.0.0",
+  "description": "Frontend Mentor - Social links profile challenge, built with Tailwind CSS",
+  "private": true,
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "watch": "node scripts/build.mjs --watch"
+  },
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.1.0",
+    "tailwindcss": "^4.3.2"
+  }
+}
