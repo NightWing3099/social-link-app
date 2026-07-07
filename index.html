@@ -12,61 +12,83 @@
             href="./assets/images/favicon-32x32.png"
         />
 
-        <!-- Tailwind CSS: this is the generated stylesheet (from npm run build) -->
+        <!-- Inter font from Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+            rel="stylesheet"
+        />
+
+        <!-- Custom CSS (responsive media queries) -->
         <link rel="stylesheet" href="src/input.css"/>
 
         <!-- Tailwind CSS Play CDN: loads Tailwind instantly, no build step.
-             This is just for quick previewing while you learn.
-             Later, remove this line and rely on the local build above. -->
+             Custom colors are defined via the config below. -->
         <script src="https://cdn.tailwindcss.com"></script>
-
+        <script>
+            tailwind.config = {
+                theme: {
+                    extend: {
+                        colors: {
+                            green: "hsl(75, 94%, 57%)",
+                            grey: {
+                                700: "hsl(0, 0%, 20%)",
+                                800: "hsl(0, 0%, 12%)",
+                                900: "hsl(0, 0%, 8%)",
+                            },
+                        },
+                    },
+                },
+            };
+        </script>
 
         <title>Frontend Mentor | Social links profile</title>
     </head>
-    <body>
-        <div class="flex flex-col items-center justify-center min-h-screen bg-gray-100 p-4">
-            <div class="card bg-white rounded-xl h-100 shadow-lg p-6 max-w-md w-full">
+    <body class="font-[Inter]">
+        <div class="flex flex-col items-center justify-center min-h-screen bg-black p-4">
+            <div class="card bg-grey-900 rounded-xl p-6 max-w-md w-full">
                 <div class="flex flex-col items-center">
                     <img
                         src="./assets/images/avatar-jessica.jpeg"
                         alt="Jessica Randall"
-                        class="w-24 h-24 rounded-full border-4 border-blue-500 mb-4"
+                        class="w-24 h-24 rounded-full mb-6"
                     />
-                    <h1 class="card-title text-2xl font-bold text-gray-800">Jessica Randall</h1>
-                    <p class="text-gray-600">London, United Kingdom</p>
-                    <p class="text-gray-500 text-center mt-2">
+                    <h1 class="card-title text-2xl font-bold text-white">Jessica Randall</h1>
+                    <p class="text-green font-semibold text-sm mt-1">London, United Kingdom</p>
+                    <p class="text-white/70 text-sm text-center mt-5">
                         "Front-end developer and avid reader."
                     </p>
                 </div>
 
-                <div class="flex flex-wrap flex-col justify-center gap-4 mt-6">
+                <div class="flex flex-col justify-center gap-4 mt-6">
                     <a
                         href="https://github.com/"
-                        class="card-btn bg-blue-500 hover:bg-blue-600 text-center text-white font-medium py-3 px-4 rounded-md transition duration-300"
+                        class="card-btn bg-grey-700 hover:bg-green hover:text-grey-900 text-center text-white font-semibold text-sm py-3 px-4 rounded-lg transition duration-300"
                     >
                         GitHub
                     </a>
                     <a
                         href="https://www.frontendmentor.io/"
-                        class="card-btn bg-blue-500 hover:bg-blue-600 text-center text-white font-medium py-3 px-4 rounded-md transition duration-300"
+                        class="card-btn bg-grey-700 hover:bg-green hover:text-grey-900 text-center text-white font-semibold text-sm py-3 px-4 rounded-lg transition duration-300"
                     >
                         Frontend Mentor
                     </a>
                     <a
                         href="https://www.linkedin.com/"
-                        class="card-btn bg-blue-500 hover:bg-blue-600 text-center text-white font-medium py-3 px-4 rounded-md transition duration-300"
+                        class="card-btn bg-grey-700 hover:bg-green hover:text-grey-900 text-center text-white font-semibold text-sm py-3 px-4 rounded-lg transition duration-300"
                     >
                         LinkedIn
                     </a>
                     <a
                         href="https://x.com/"
-                        class="card-btn bg-blue-500 hover:bg-blue-600 text-center text-white font-medium py-3 px-4 rounded-md transition duration-300"
+                        class="card-btn bg-grey-700 hover:bg-green hover:text-grey-900 text-center text-white font-semibold text-sm py-3 px-4 rounded-lg transition duration-300"
                     >
                         Twitter
                     </a>
                     <a
                         href="https://www.instagram.com/?hl=en"
-                        class="card-btn bg-blue-500 hover:bg-blue-600 text-center text-white font-medium py-3 px-4 rounded-md transition duration-300"
+                        class="card-btn bg-grey-700 hover:bg-green hover:text-grey-900 text-center text-white font-semibold text-sm py-3 px-4 rounded-lg transition duration-300"
                     >
                         Instagram
                     </a>
@@ -74,11 +96,11 @@
             </div>
         </div>
 
-        <footer class="flex justify-center items-center mt-2 text-gray-500 text-sm">
+        <footer class="flex justify-center items-center mt-2 text-white/50 text-xs">
             Challenge by
-            <a href="https://www.frontendmentor.io?ref=challenge"
+            <a href="https://www.frontendmentor.io?ref=challenge" class="text-white/70 hover:text-green ml-1"
                 >Frontend Mentor</a
-            >. Coded by <a href="#">Iree Hale</a>.
+            >. Coded by <a href="#" class="text-white/70 hover:text-green ml-1">Iree Hale</a>.
         </footer>
     </body>
 </html>

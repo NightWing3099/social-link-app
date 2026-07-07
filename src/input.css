@@ -1,20 +1,8 @@
 /* ===================================================================
-   Social links profile — main style sheet
+   Social links profile — custom CSS
    -------------------------------------------------------------------
-   This file is the SOURCE. You write your custom CSS here.
-   Tailwind reads this file and generates the optimized CSS in dist/.
-
-   The single line below pulls in ALL of Tailwind's utility classes.
-   Without it, none of the "bg-", "flex", "text-" classes would work.
-   =================================================================== */
-@import "tailwindcss";
-
-/* ===================================================================
-   Custom theme tweaks (optional, for later)
-   -------------------------------------------------------------------
-   The Inter font and the challenge's color palette live in the
-   style-guide.md. We can map those into Tailwind later using
-   @theme. For now, the basics are ready to go!
+   Responsive media queries for the card layout.
+   Tailwind is loaded via CDN in index.html.
    =================================================================== */
 
 /* ===================================================================
@@ -23,9 +11,6 @@
 
 /* --- Small phones (under 375px) --- */
 @media (max-width: 374px) {
-  body {
-    padding: 1rem;
-  }
   .card {
     padding: 1.25rem;
   }
@@ -77,7 +62,7 @@
   }
   .card-btn:hover {
     transform: translateY(-1px);
-    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.4);
+    box-shadow: 0 4px 12px hsla(75, 94%, 57%, 0.4);
   }
 }
 
