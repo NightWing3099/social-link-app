@@ -16,3 +16,74 @@
    style-guide.md. We can map those into Tailwind later using
    @theme. For now, the basics are ready to go!
    =================================================================== */
+
+/* ===================================================================
+   📱 Responsive Media Queries
+   =================================================================== */
+
+/* --- Small phones (under 375px) --- */
+@media (max-width: 374px) {
+  body {
+    padding: 1rem;
+  }
+  .card {
+    padding: 1.25rem;
+  }
+  .card-title {
+    font-size: 1.25rem;
+  }
+  .card-btn {
+    font-size: 0.8125rem;
+    padding: 0.625rem 1rem;
+  }
+}
+
+/* --- Mobile (375px - 639px) --- */
+@media (min-width: 375px) and (max-width: 639px) {
+  .card {
+    padding: 1.5rem;
+  }
+  .card-btn {
+    font-size: 0.875rem;
+  }
+}
+
+/* --- Tablet (640px - 1023px) --- */
+@media (min-width: 640px) and (max-width: 1023px) {
+  .card {
+    padding: 2rem;
+    max-width: 28rem;
+  }
+  .card-title {
+    font-size: 1.75rem;
+  }
+  .card-btn {
+    padding: 0.75rem 1.5rem;
+  }
+}
+
+/* --- Desktop (1024px and up) --- */
+@media (min-width: 1024px) {
+  .card {
+    padding: 2.5rem;
+    max-width: 32rem;
+  }
+  .card-title {
+    font-size: 2rem;
+  }
+  .card-btn {
+    padding: 0.875rem 2rem;
+    font-size: 1rem;
+  }
+  .card-btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.4);
+  }
+}
+
+/* --- Large desktop (1440px and up) --- */
+@media (min-width: 1440px) {
+  .card {
+    max-width: 36rem;
+  }
+}
